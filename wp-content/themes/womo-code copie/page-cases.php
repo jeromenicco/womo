@@ -93,6 +93,8 @@ $term_args = array(
     const allBtn = document.querySelector('li.all')
     const filterButtons = [...document.querySelectorAll('.cat-list li h6')]
     const gridElements = [...document.querySelectorAll('.post-card')]
+
+    
     filterButtons.forEach((btn, index) => {
         btn.addEventListener('click', (e) => {
             const catName = e.currentTarget.innerHTML.toLowerCase().split(' ').join('-')
@@ -111,24 +113,6 @@ $term_args = array(
         })
     })
 
-    // filterButtons.forEach((btn, index) => {
-    //     btn.addEventListener('mouseenter', (e) => {
-    //         const catName = e.currentTarget.innerHTML.toLowerCase()
-    //         gridElements.forEach((element, index) => {
-    //             element.classList.contains(catName) &&
-    //             element.classList.add('show')
-    //         })
-    //     })
-    // })
-    // filterButtons.forEach((btn, index) => {
-    //     btn.addEventListener('mouseleave', (e) => {
-    //         const catName = e.currentTarget.innerHTML.toLowerCase()
-    //         gridElements.forEach((element, index) => {
-    //             element.classList.contains(catName) &&
-    //             element.classList.remove('show')
-    //         })
-    //     })
-    // })
 
     allBtn.addEventListener('click', () => {
         gridElements.forEach((element, index) => element.classList.add("show"))
